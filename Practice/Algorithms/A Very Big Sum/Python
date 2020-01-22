@@ -1,8 +1,27 @@
-def solveMeFirst(a,b):
-	# Hint: Type return a+b below
-    return a+b
+#!/bin/python3
 
-num1 = int(input())
-num2 = int(input())
-res = solveMeFirst(num1,num2)
-print(res)
+import math
+import os
+import random
+import re
+import sys
+
+
+def aVeryBigSum(ar):
+    sum1 = 0
+    for x in ar:
+        sum1 += x
+    return sum1
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    ar_count = int(input())
+
+    ar = list(map(int, input().rstrip().split()))
+
+    result = aVeryBigSum(ar)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
